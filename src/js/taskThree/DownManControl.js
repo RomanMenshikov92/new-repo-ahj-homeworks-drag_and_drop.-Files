@@ -1,27 +1,27 @@
-import filesFirstMusic from '../../files/2Pac - Changes.mp3';
-import filesSecondMusic from '../../files/2Pac - Cradle To The Grave (ft. Thug Life).mp3';
-import filesThirdMusic from '../../files/Center - Город дорог (ft. Баста).mp3';
+import bookStorageStandard from '../../files/Storage Standard.pdf';
+import bookStreamsStandard from '../../files/Streams Standard.pdf';
+import bookXMLHttpRequestStandard from '../../files/XMLHttpRequest Standard.pdf';
 
 export default class DownManControl {
   constructor(downManDOM) {
     this.downManDOM = downManDOM; // класс который управляет DOM
     this.totalSize = 0;
 
-    this.musicLegend = [
+    this.books = [
       {
-        name: '2Pac - Changes',
+        name: 'Storage Standard',
         size: '',
-        url: filesFirstMusic,
+        url: bookStorageStandard,
       },
       {
-        name: '2Pac - Gradle to  the Grave',
+        name: 'Streams Standard',
         size: '',
-        url: filesSecondMusic,
+        url: bookStreamsStandard,
       },
       {
-        name: 'Center - Город дорог',
+        name: 'XMLHttpRequest Standard',
         size: '',
-        url: filesThirdMusic,
+        url: bookXMLHttpRequestStandard,
       },
     ];
   }
@@ -36,8 +36,8 @@ export default class DownManControl {
   // замена обычного URL на Data URL
   async chengeUrl() {
     // цикл по массиву книг
-    for (let i = 0; i < this.musicLegend.length; i += 1) {
-      const { url } = this.musicLegend[i];
+    for (let i = 0; i < this.books.length; i += 1) {
+      const { url } = this.books[i];
       if (!url) { return; }
 
       // eslint-disable-next-line no-await-in-loop
@@ -46,8 +46,8 @@ export default class DownManControl {
 
       const { size, urlBase64 } = dataUrl;
 
-      this.musicLegend[i].size = DownManControl.size(size); // размер книги
-      this.musicLegend[i].url = urlBase64; // Data URL
+      this.books[i].size = DownManControl.size(size); // размер книги
+      this.books[i].url = urlBase64; // Data URL
     }
   }
 
@@ -69,7 +69,7 @@ export default class DownManControl {
   renderingFiles() {
     this.downManDOM.clearFiles(); // очистка списка файлов
 
-    const arr = this.musicLegend;
+    const arr = this.books;
     for (let i = 0; i < arr.length; i += 1) {
       this.downManDOM.htmlFilecontainer(arr[i].name, arr[i].size, arr[i].url);
     }

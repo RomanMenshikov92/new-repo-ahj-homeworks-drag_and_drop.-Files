@@ -1,3 +1,4 @@
+// import bookBase64 from './bookBase64';
 require('../../css/TaskThree.css');
 
 export default class DownManDOM {
@@ -32,7 +33,7 @@ export default class DownManDOM {
           Download Manager* (задача со звёздочкой)
         </H3>
         <div class="downloader-container">
-          <div class="file-header">Доступные файлы для скачивания:</div>
+          <div class="file-header">Доступные файлы (без смс и регистрации):</div>
           <div class="file-list">
             <!-- контейнеры с файлами -->
           </div>

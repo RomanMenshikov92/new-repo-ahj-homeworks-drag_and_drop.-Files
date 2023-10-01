@@ -51,10 +51,10 @@ module.exports = {
         },
       },
       {
-        test: /\.mp3$/,
+        test: /\.pdf$/,
         type: "asset/resource",
         generator: {
-          filename: path.join("music", "[name][ext]"),
+          filename: path.join("books", "[name][ext]"),
         },
       },
     ],
