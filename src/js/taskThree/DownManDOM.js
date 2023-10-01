@@ -1,4 +1,3 @@
-// import bookBase64 from './bookBase64';
 require('../../css/TaskThree.css');
 
 export default class DownManDOM {

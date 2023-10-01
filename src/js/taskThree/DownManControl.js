@@ -7,7 +7,7 @@ export default class DownManControl {
     this.downManDOM = downManDOM; // класс который управляет DOM
     this.totalSize = 0;
 
-    this.books = [
+    this.musicLegend = [
       {
         name: '2Pac - Changes',
         size: '',
@@ -36,8 +36,8 @@ export default class DownManControl {
   // замена обычного URL на Data URL
   async chengeUrl() {
     // цикл по массиву книг
-    for (let i = 0; i < this.books.length; i += 1) {
-      const { url } = this.books[i];
+    for (let i = 0; i < this.musicLegend.length; i += 1) {
+      const { url } = this.musicLegend[i];
       if (!url) { return; }
 
       // eslint-disable-next-line no-await-in-loop
@@ -46,8 +46,8 @@ export default class DownManControl {
 
       const { size, urlBase64 } = dataUrl;
 
-      this.books[i].size = DownManControl.size(size); // размер книги
-      this.books[i].url = urlBase64; // Data URL
+      this.musicLegend[i].size = DownManControl.size(size); // размер книги
+      this.musicLegend[i].url = urlBase64; // Data URL
     }
   }
 
@@ -69,7 +69,7 @@ export default class DownManControl {
   renderingFiles() {
     this.downManDOM.clearFiles(); // очистка списка файлов
 
-    const arr = this.books;
+    const arr = this.musicLegend;
     for (let i = 0; i < arr.length; i += 1) {
       this.downManDOM.htmlFilecontainer(arr[i].name, arr[i].size, arr[i].url);
     }

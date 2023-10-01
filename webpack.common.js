@@ -53,7 +53,7 @@ module.exports = {
         test: /\.pdf$/,
         type: "asset/resource",
         generator: {
-          filename: path.join("books", "[name][ext]"),
+          filename: path.join("music", "[name][ext]"),
         },
       },
     ],
