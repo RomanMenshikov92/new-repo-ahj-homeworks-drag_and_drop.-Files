@@ -3,10 +3,11 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+  entry: "./src/index.js", // входной файл
   target: "web",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: '[name][ext][query]', // add this line
+    path: path.resolve(__dirname, "dist"),
+    assetModuleFilename: "[name][ext][query]", // add this line
     // publicPath: '/', // эта штука, что бы менять путь
     clean: true, // для очистки папки dist при новом билде
   },
