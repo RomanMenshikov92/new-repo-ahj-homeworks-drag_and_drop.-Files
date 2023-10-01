@@ -51,7 +51,7 @@ module.exports = {
         },
       },
       {
-        test: /\.pdf$/,
+        test: /\.mp3$/,
         type: "asset/resource",
         generator: {
           filename: path.join("music", "[name][ext]"),
