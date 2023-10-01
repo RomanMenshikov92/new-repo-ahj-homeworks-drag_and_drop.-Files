@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/RomanMenshikov92/new-repo-ahj-homeworks-drag_and_drop.-Files/actions/workflows/web.yml/badge.svg)
 
-<!-- [![Build status](https://ci.appveyor.com/api/projects/status/12tmda6tes4cm0q4?svg=true)](https://ci.appveyor.com/project/RomanMenshikov92/new-repo-ahj-homeworks-event-handling) -->
+[![Build status](https://ci.appveyor.com/api/projects/status/2rn9pa9bg5wsamrs?svg=true)](https://ci.appveyor.com/project/RomanMenshikov92/new-repo-ahj-homeworks-drag-and-drop-files)
 
 Правила сдачи задания:
 
